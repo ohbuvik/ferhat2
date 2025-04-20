@@ -1,0 +1,27 @@
+@model Bruker
+
+@{
+    ViewData["Title"] = "Slett bruker";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Er du sikker på at du vil slette denne brukeren?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Navn</dt>
+    <dd class="col-sm-9">@Model.Navn</dd>
+
+    <dt class="col-sm-3">Kontaktinfo</dt>
+    <dd class="col-sm-9">@Model.KontaktInfo</dd>
+
+    <dt class="col-sm-3">Antall spill gjennomført</dt>
+    <dd class="col-sm-9">@Model.AntallSpill</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Slett</button>
+    <a asp-action="Index" class="btn btn-secondary">Avbryt</a>
+</form>
