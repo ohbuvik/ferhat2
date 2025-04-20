@@ -1,0 +1,25 @@
+@model Bruker
+
+@{
+    ViewData["Title"] = "Brukerdetaljer";
+}
+
+<h1>Brukerdetaljer</h1>
+
+<div>
+    <h4>Bruker</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Navn</dt>
+        <dd class="col-sm-10">@Model.Navn</dd>
+
+        <dt class="col-sm-2">Kontaktinfo</dt>
+        <dd class="col-sm-10">@Model.KontaktInfo</dd>
+
+        <dt class="col-sm-2">Antall spill</dt>
+        <dd class="col-sm-10">@Model.AntallSpill</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Rediger</a>
+<a asp-action="Index" class="btn btn-secondary">Tilbake</a>

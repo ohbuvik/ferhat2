@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/TSD2491-oblig1-ferhat_oystein.props" />
+</Project>
